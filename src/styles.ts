@@ -125,7 +125,7 @@ const getStyles = ({ color, variant, shape, size, disabled, fullWidth }: Props) 
     classes.push(stylesMapping.fullWidth)
   }
 
-  return classes.join(' ')
+  return [...new Set(classes.join(' ').split(' '))].join(' ')
 }
 
 export default getStyles
