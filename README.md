@@ -1,1 +1,1 @@
-# button
+# @architecturex/core.i18n
