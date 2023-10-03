@@ -1,7 +1,5 @@
 import cx from '@architecturex/utils.cx'
 
-const classes: string[] = []
-
 type Props = {
   color: 'primary' | 'secondary' | 'success' | 'danger' | 'info' | 'warning' | 'light' | 'dark'
   variant: 'contained' | 'outlined' | 'text'
@@ -115,6 +113,8 @@ const stylesMapping: StylesMapping = {
 }
 
 export const getStyles = ({ color, variant, shape, size, disabled, fullWidth }: Props) => {
+  const classes: string[] = []
+
   classes.push(stylesMapping.color[color][variant])
   classes.push(stylesMapping.shape[shape])
   classes.push(stylesMapping.size[size])

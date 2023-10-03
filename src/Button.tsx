@@ -1,5 +1,5 @@
 import React, { ComponentPropsWithoutRef, FC, ReactNode } from 'react'
-
+import cx from '@architecturex/utils.cx'
 import { getStyles } from './styles'
 
 interface Props extends ComponentPropsWithoutRef<'button'> {
@@ -27,6 +27,7 @@ const ButtonComponent: FC<Props> = ({
   loadingText = '',
   fullWidth = false,
   children,
+  className = '',
   ...btnProps
 }) => {
   const classNames = getStyles({
@@ -37,6 +38,7 @@ const ButtonComponent: FC<Props> = ({
     disabled: isLoading || disabled,
     fullWidth
   })
+
   let buttonText: ReactNode[] | ReactNode | string = children
 
   if (isLoading) {
@@ -52,7 +54,7 @@ const ButtonComponent: FC<Props> = ({
     return (
       <span
         data-component="LinkButton"
-        className={classNames}
+        className={cx.join(classNames, className)}
         {...linkBtnProps}
         disabled={isLoading || disabled}
       >
@@ -64,7 +66,7 @@ const ButtonComponent: FC<Props> = ({
   return (
     <button
       data-component="Button"
-      className={classNames}
+      className={cx.join(classNames, className)}
       {...btnProps}
       disabled={isLoading || disabled}
     >
