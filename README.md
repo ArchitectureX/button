@@ -33,16 +33,16 @@ function App() {
 
 ### Props
 
-**color:** Sets the color scheme of the button. (default: 'primary')
-**size:** Determines the size of the button. (default: 'medium')
-**variant:** Sets the button style. (default: 'contained')
-**shape:** Defines the shape of the button. (default: 'regular')
-**href:** If provided, the button will be rendered as a link.
-**target:** Set the target attribute for the link button.
-**fullWidth:** If true, the button will take up the full width of its container.
-**disabled:** If true, the button will be disabled.
-**isLoading:** If true, the button will show a loading state.
-**loadingText:** Text to show during the loading state.
+- **color:** Sets the color scheme of the button. (default: 'primary')
+- **size:** Determines the size of the button. (default: 'medium')
+- **variant:** Sets the button style. (default: 'contained')
+- **shape:** Defines the shape of the button. (default: 'regular')
+- **href:** If provided, the button will be rendered as a link.
+- **target:** Set the target attribute for the link button.
+- **fullWidth:** If true, the button will take up the full width of its container.
+- **disabled:** If true, the button will be disabled.
+- **isLoading:** If true, the button will show a loading state.
+- **loadingText:** Text to show during the loading state.
 
 ### Contribution
 
