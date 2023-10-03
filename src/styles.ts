@@ -1,3 +1,5 @@
+import cx from '@architecturex/utils.cx'
+
 const classes: string[] = []
 
 type Props = {
@@ -112,7 +114,7 @@ const stylesMapping: StylesMapping = {
   fullWidth: 'w-full'
 }
 
-const getStyles = ({ color, variant, shape, size, disabled, fullWidth }: Props) => {
+export const getStyles = ({ color, variant, shape, size, disabled, fullWidth }: Props) => {
   classes.push(stylesMapping.color[color][variant])
   classes.push(stylesMapping.shape[shape])
   classes.push(stylesMapping.size[size])
@@ -128,4 +130,4 @@ const getStyles = ({ color, variant, shape, size, disabled, fullWidth }: Props) 
   return [...new Set(classes.join(' ').split(' '))].join(' ')
 }
 
-export default getStyles
+export const tailwindClasses = cx.extract(stylesMapping)

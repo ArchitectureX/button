@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithoutRef, FC, ReactNode } from 'react'
 
-import getStyles from './styles'
+import { getStyles } from './styles'
 
 interface Props extends ComponentPropsWithoutRef<'button'> {
   color?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info' | 'light' | 'dark'
