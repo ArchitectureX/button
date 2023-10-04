@@ -31,7 +31,7 @@ function mergeConfig(defaults: object, userConfig: object): object {
   return deepMerge({ ...defaults }, userConfig)
 }
 
-const configPath = '../../../../../packages/frontend/architecturex.config.js'
+const configPath = '../../../packages/frontend/architecturex.config.js'
 console.log('PATH', configPath)
 const userConfigPath = path.resolve(configPath)
 const userConfig = loadUserConfig(userConfigPath)
