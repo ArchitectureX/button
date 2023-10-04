@@ -94,7 +94,7 @@ const stylesMapping: StylesMapping = {
     dark: {
       contained: 'bg-gray-900 hover:bg-gray-800 text-gray-100',
       outlined:
-        'bg-white hover:bg-gray-900 text-gray-100 border border-gray-900 hover:border-gray-800 hover:text-white',
+        'bg-white hover:bg-gray-900 text-gray-900 border border-gray-900 hover:border-gray-800 hover:text-white',
       text: 'bg-white hover:bg-gray-900 text-gray-100'
     }
   },
