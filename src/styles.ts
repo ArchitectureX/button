@@ -53,11 +53,11 @@ const stylesMapping: StylesMapping = {
       contained: 'bg-eden hover:bg-elephant text-white',
       outlined:
         'bg-white hover:bg-elephant text-elephant border border-elephant hover:border-elephant',
-      text: 'bg-white hover:elephant text-elephant'
+      text: 'bg-white hover:bg-elephant text-elephant'
     },
     secondary: {
-      contained: 'bg-emerald hover:forest text-white',
-      outlined: 'bg-white hover:forest text-forest border border-forest hover:border-forest',
+      contained: 'bg-emerald hover:bg-forest text-white',
+      outlined: 'bg-white hover:bg-forest text-forest border border-forest hover:border-forest',
       text: 'bg-white hover:bg-forest text-forest'
     },
     success: {
