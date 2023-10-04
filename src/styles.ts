@@ -50,39 +50,37 @@ interface StylesMapping {
 const stylesMapping: StylesMapping = {
   color: {
     primary: {
-      contained: 'bg-blue-500 hover:bg-blue-600 text-white',
+      contained: 'bg-eden hover:bg-palmLeaf text-white',
       outlined:
-        'bg-white hover:bg-blue-500 text-blue-500 border border-blue-500 hover:border-blue-600',
-      text: 'bg-white hover:bg-blue-500 text-blue-500'
+        'bg-white hover:bg-palmLeaf text-palmLeaf border border-palmLeaf hover:border-palmLeaf',
+      text: 'bg-white hover:palmLeaf text-palmLeaf'
     },
     secondary: {
-      contained: 'bg-gray-300 hover:bg-gray-400 text-gray-800',
-      outlined:
-        'bg-white hover:bg-gray-300 text-gray-800 border border-gray-300 hover:border-gray-400',
-      text: 'bg-white hover:bg-gray-300 text-gray-800'
+      contained: 'bg-emerald hover:forest text-white',
+      outlined: 'bg-white hover:forest text-forest border border-forest hover:border-forest',
+      text: 'bg-white hover:bg-forest text-forest'
     },
     success: {
-      contained: 'bg-green-300 hover:bg-green-400 text-green-800',
-      outlined:
-        'bg-white hover:bg-green-300 text-green-800 border border-green-300 hover:border-green-400',
-      text: 'bg-white hover:bg-green-300 text-green-800'
+      contained: 'bg-pastel hover:bg-emerald text-white',
+      outlined: 'bg-white hover:bg-emerald text-emerald border border-emerald hover:border-emerald',
+      text: 'bg-white hover:bg-emerald text-emerald'
     },
     danger: {
-      contained: 'bg-red-300 hover:bg-red-400 text-red-800',
-      outlined: 'bg-white hover:bg-red-300 text-red-800 border border-red-300 hover:border-red-400',
-      text: 'bg-white hover:bg-red-300 text-red-800'
+      contained: 'bg-cinnabar hover:bg-thunderbird text-white',
+      outlined:
+        'bg-white hover:bg-thunderbird text-thunderbird border border-thunderbird hover:border-thunderbird',
+      text: 'bg-white hover:bg-thunderbird text-thunderbird'
     },
     info: {
-      contained: 'bg-blue-300 hover:bg-blue-400 text-blue-800',
+      contained: 'bg-blue-500 hover:bg-blue-600 text-white',
       outlined:
-        'bg-white hover:bg-blue-300 text-blue-800 border border-blue-300 hover:border-blue-400',
-      text: 'bg-white hover:bg-blue-300 text-blue-800'
+        'bg-white hover:g-blue-600 text-blue-600 border border-blue-600 hover:border-blue-600',
+      text: 'bg-white hover:bg-blue-600 text-blue-600'
     },
     warning: {
-      contained: 'bg-yellow-300 hover:bg-yellow-400 text-yellow-800',
-      outlined:
-        'bg-white hover:bg-yellow-300 text-yellow-800 border border-yellow-300 hover:border-yellow-400',
-      text: 'bg-white hover:bg-yellow-300 text-yellow-800'
+      contained: 'bg-orange hover:bg-fire text-white',
+      outlined: 'bg-white hover:bg-fire text-fire border border-fire hover:border-fire',
+      text: 'bg-white hover:bg-fire text-fire'
     },
     light: {
       contained: 'bg-gray-100 hover:bg-gray-200 text-gray-900',
