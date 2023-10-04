@@ -24,14 +24,12 @@ function deepMerge(target: any, source: any): object {
 }
 
 function mergeConfig(defaults: object, userConfig: object): object {
-  const configPath = process.cwd() + '/architecturex.config.js'
-  console.log('PATH', configPath)
   console.log('DEFAULT CONFIG', defaults)
   console.log('USER CONFIG', userConfig)
   return deepMerge({ ...defaults }, userConfig)
 }
 
-const configPath = process.cwd() + '/architecturex.config.js'
+const configPath = '../../../../../packages/frontend/architecturex.config.js'
 console.log('PATH', configPath)
 const userConfigPath = path.resolve(configPath)
 const userConfig = loadUserConfig(userConfigPath)
