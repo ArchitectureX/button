@@ -29,7 +29,9 @@ function mergeConfig(defaults: object, userConfig: object): object {
   return deepMerge({ ...defaults }, userConfig)
 }
 
-const userConfigPath = path.resolve(process.cwd(), 'architecturex.config.js')
+const configPath = process.cwd() + 'architecturex.config.js'
+console.log('PATH', configPath)
+const userConfigPath = path.resolve(configPath)
 const userConfig = loadUserConfig(userConfigPath)
 const finalConfig = mergeConfig(defaultConfig, userConfig)
 
