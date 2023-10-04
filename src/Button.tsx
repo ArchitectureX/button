@@ -7,6 +7,8 @@ interface Props extends ComponentPropsWithoutRef<'button'> {
   size?: 'small' | 'medium' | 'large'
   variant?: 'contained' | 'outlined' | 'text'
   shape?: 'regular' | 'rounded' | 'circle' | 'square'
+  frontColor?: string
+  hoverColor?: string
   href?: string
   target?: string
   fullWidth?: boolean
@@ -28,6 +30,8 @@ const ButtonComponent: FC<Props> = ({
   fullWidth = false,
   children,
   className = '',
+  frontColor = '',
+  hoverColor = '',
   ...btnProps
 }) => {
   const classNames = getStyles({
@@ -54,7 +58,7 @@ const ButtonComponent: FC<Props> = ({
     return (
       <span
         data-component="LinkButton"
-        className={cx.join(classNames, className)}
+        className={cx.join(classNames, className, frontColor, hoverColor)}
         {...linkBtnProps}
         disabled={isLoading || disabled}
       >
@@ -66,7 +70,7 @@ const ButtonComponent: FC<Props> = ({
   return (
     <button
       data-component="Button"
-      className={cx.join(classNames, className)}
+      className={cx.join(classNames, className, frontColor, hoverColor)}
       {...btnProps}
       disabled={isLoading || disabled}
     >
