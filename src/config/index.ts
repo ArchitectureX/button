@@ -11,8 +11,22 @@ function loadUserConfig(configPath: string): object {
   return require(configPath)
 }
 
-function mergeConfig(defaults: object, userConfig: object): any {
-  return { ...defaults, ...userConfig }
+function deepMerge(target: any, source: any): object {
+  for (const key in source) {
+    if (source[key] instanceof Object && target[key]) {
+      target[key] = deepMerge(target[key], source[key])
+    } else {
+      target[key] = source[key]
+    }
+  }
+
+  return target
+}
+
+function mergeConfig(defaults: object, userConfig: object): object {
+  console.log('DEFAULT CONFIG', defaults)
+  console.log('USER CONFIG', userConfig)
+  return deepMerge({ ...defaults }, userConfig)
 }
 
 const userConfigPath = path.resolve(process.cwd(), 'architecturex.config.js')
