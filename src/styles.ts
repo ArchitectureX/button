@@ -50,10 +50,10 @@ interface StylesMapping {
 const stylesMapping: StylesMapping = {
   color: {
     primary: {
-      contained: 'bg-eden hover:bg-palmLeaf text-white',
+      contained: 'bg-eden hover:bg-elephant text-white',
       outlined:
-        'bg-white hover:bg-palmLeaf text-palmLeaf border border-palmLeaf hover:border-palmLeaf',
-      text: 'bg-white hover:palmLeaf text-palmLeaf'
+        'bg-white hover:bg-elephant text-elephant border border-elephant hover:border-elephant',
+      text: 'bg-white hover:elephant text-elephant'
     },
     secondary: {
       contained: 'bg-emerald hover:forest text-white',
