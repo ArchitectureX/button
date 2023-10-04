@@ -49,7 +49,7 @@ interface StylesMapping {
 }
 
 const stylesMapping: StylesMapping = {
-  color: config.button.palette,
+  color: config.components.button.palette,
   shape: {
     circle: 'rounded-full',
     square: 'rounded-none',

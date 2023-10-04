@@ -9,8 +9,13 @@ function loadUserConfig(configPath: string): object {
   }
 
   const fileContents = fs.readFileSync(configPath, 'utf8');
-  console.log('FILE CONTENTS', fileContents)
-  return JSON.parse(fileContents);
+
+  try {
+    return JSON.parse(fileContents);
+  } catch (err) {
+    console.error(err);
+    return {};
+  }
 }
 
 function deepMerge(target: any, source: any): object {
@@ -26,13 +31,10 @@ function deepMerge(target: any, source: any): object {
 }
 
 function mergeConfig(defaults: object, userConfig: object): object {
-  console.log('DEFAULT CONFIG', defaults)
-  console.log('USER CONFIG', userConfig)
   return deepMerge({ ...defaults }, userConfig)
 }
 
-const configPath = '../../packages/frontend/architecturex.config.json'
-console.log('PATH', configPath)
+const configPath = process.cwd() + '/.architecturexrc.json'
 const userConfigPath = path.resolve(configPath)
 const userConfig = loadUserConfig(userConfigPath)
 const finalConfig = mergeConfig(defaultConfig, userConfig)
