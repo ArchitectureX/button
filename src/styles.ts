@@ -76,7 +76,7 @@ const stylesMapping: StylesMapping = {
     info: {
       contained: 'bg-blue-500 hover:bg-blue-600 text-white',
       outlined:
-        'bg-white hover:g-blue-600 text-blue-600 border border-blue-600 hover:border-blue-600 hover:text-white',
+        'bg-white hover:bg-blue-600 text-blue-600 border border-blue-600 hover:border-blue-600 hover:text-white',
       text: 'bg-white hover:bg-blue-600 text-blue-600'
     },
     warning: {
