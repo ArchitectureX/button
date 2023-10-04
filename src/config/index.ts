@@ -4,8 +4,10 @@ import path from 'path'
 import defaultConfig, { Configuration } from './defaultConfig'
 
 function loadUserConfig(configPath: string): object {
+  console.log('ANTES DEL EXIST')
+
   if (!fs.existsSync(configPath)) {
-    return {}
+    return require(configPath)
   }
 
   return require(configPath)
