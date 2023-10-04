@@ -4,13 +4,13 @@ import path from 'path'
 import defaultConfig, { Configuration } from './defaultConfig'
 
 function loadUserConfig(configPath: string): object {
-  console.log('ANTES DEL EXIST')
-
   if (!fs.existsSync(configPath)) {
-    return require(configPath)
+    return {};
   }
 
-  return require(configPath)
+  const fileContents = fs.readFileSync(configPath, 'utf8');
+  console.log('FILE CONTENTS', fileContents)
+  return JSON.parse(fileContents);
 }
 
 function deepMerge(target: any, source: any): object {
@@ -31,7 +31,7 @@ function mergeConfig(defaults: object, userConfig: object): object {
   return deepMerge({ ...defaults }, userConfig)
 }
 
-const configPath = '../../packages/frontend/architecturex.config.js'
+const configPath = '../../packages/frontend/architecturex.config.json'
 console.log('PATH', configPath)
 const userConfigPath = path.resolve(configPath)
 const userConfig = loadUserConfig(userConfigPath)
