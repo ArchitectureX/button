@@ -8,6 +8,7 @@ type Props = {
   size: 'small' | 'medium' | 'large'
   disabled: boolean
   fullWidth: boolean
+  noDecoration: string
 }
 
 type ButtonVariant = 'contained' | 'outlined' | 'text'
@@ -46,6 +47,7 @@ interface StylesMapping {
   size: SizeStyles
   disabled: string
   fullWidth: string
+  noDecoration: string
 }
 
 const stylesMapping: StylesMapping = {
@@ -62,7 +64,8 @@ const stylesMapping: StylesMapping = {
     large: 'px-6 py-3 text-base'
   },
   disabled: 'opacity-50 cursor-not-allowed',
-  fullWidth: 'w-full'
+  fullWidth: 'w-full',
+  noDecoration: 'hover:no-underline'
 }
 
 export const getStyles = ({ color, variant, shape, size, disabled, fullWidth }: Props) => {

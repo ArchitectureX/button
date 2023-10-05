@@ -62,7 +62,7 @@ const ButtonComponent: FC<Props> = ({
         {...linkBtnProps}
         disabled={isLoading || disabled}
       >
-        <a {...linkBtnProps} className="no-underline">
+        <a {...linkBtnProps} className="hover:no-underline">
           {buttonText}
         </a>
       </span>
