@@ -8,7 +8,6 @@ type Props = {
   size: 'small' | 'medium' | 'large'
   disabled: boolean
   fullWidth: boolean
-  noDecoration: string
 }
 
 type ButtonVariant = 'contained' | 'outlined' | 'text'
