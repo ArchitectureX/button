@@ -1,5 +1,6 @@
 import React, { ComponentPropsWithoutRef, FC, ReactNode } from 'react'
 import cx from '@architecturex/utils.cx'
+import config from './config'
 import { getStyles } from './styles'
 
 interface Props extends ComponentPropsWithoutRef<'button'> {
@@ -18,10 +19,10 @@ interface Props extends ComponentPropsWithoutRef<'button'> {
 }
 
 const ButtonComponent: FC<Props> = ({
-  color = 'primary',
-  shape = 'regular',
-  size = 'medium',
-  variant = 'contained',
+  color = config.components.button.defaultProps.color,
+  shape = config.components.button.defaultProps.shape,
+  size = config.components.button.defaultProps.size,
+  variant = config.components.button.defaultProps.variant,
   href = '',
   target = '',
   disabled = false,

@@ -18,6 +18,20 @@ type ButtonPaletteConfig = {
 export type Configuration = {
   components: {
     button: {
+      defaultProps: {
+        color:
+          | 'primary'
+          | 'secondary'
+          | 'success'
+          | 'danger'
+          | 'info'
+          | 'warning'
+          | 'light'
+          | 'dark'
+        variant: 'contained' | 'outlined' | 'text'
+        shape: 'regular' | 'rounded' | 'circle' | 'square'
+        size: 'small' | 'medium' | 'large'
+      }
       palette: ButtonPaletteConfig
     }
   }
@@ -26,6 +40,12 @@ export type Configuration = {
 const config: Configuration = {
   components: {
     button: {
+      defaultProps: {
+        color: 'primary',
+        variant: 'contained',
+        shape: 'regular',
+        size: 'medium'
+      },
       palette: {
         primary: {
           contained: 'bg-eden hover:bg-elephant text-white',
