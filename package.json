@@ -30,7 +30,7 @@
     "prepublishOnly": "npm run lint && npm run build",
     "versioning": "./publish.sh"
   },
-  "author": "Carlos Santana",
+  "author": "ArchitectureX",
   "license": "MIT",
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.3",
