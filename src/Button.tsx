@@ -5,7 +5,7 @@ import { getStyles } from './styles'
 
 interface Props extends ComponentPropsWithoutRef<'button'> {
   color?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info' | 'light' | 'dark'
-  size?: 'small' | 'medium' | 'large'
+  size?: 'small' | 'medium' | 'large' | 'xlarge'
   variant?: 'contained' | 'outlined' | 'text'
   shape?: 'regular' | 'rounded' | 'circle' | 'square'
   frontColor?: string

@@ -5,7 +5,7 @@ type Props = {
   color: 'primary' | 'secondary' | 'success' | 'danger' | 'info' | 'warning' | 'light' | 'dark'
   variant: 'contained' | 'outlined' | 'text'
   shape: 'regular' | 'rounded' | 'circle' | 'square'
-  size: 'small' | 'medium' | 'large'
+  size: 'small' | 'medium' | 'large' | 'xlarge'
   disabled: boolean
   fullWidth: boolean
 }
@@ -38,6 +38,7 @@ type SizeStyles = {
   small: string
   medium: string
   large: string
+  xlarge: string
 }
 
 interface StylesMapping {
@@ -60,7 +61,8 @@ const stylesMapping: StylesMapping = {
   size: {
     small: 'px-2 py-1 text-xs',
     medium: 'px-4 py-2 text-sm',
-    large: 'px-6 py-3 text-base'
+    large: 'px-6 py-3 text-base',
+    xlarge: 'px-8 py-4 text-lg'
   },
   disabled: 'opacity-50 cursor-not-allowed',
   fullWidth: 'w-full',
