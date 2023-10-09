@@ -56,7 +56,7 @@
   },
   "dependencies": {
     "@architecturex/devtools": "1.1.6",
-    "@architecturex/utils.config": "^1.0.4",
+    "@architecturex/utils.config": "^1.0.5",
     "@architecturex/utils.cx": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
