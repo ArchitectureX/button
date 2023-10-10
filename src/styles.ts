@@ -65,7 +65,7 @@ const stylesMapping: StylesMapping = {
     xlarge: 'px-8 py-4 text-lg'
   },
   disabled: 'opacity-50 cursor-not-allowed',
-  fullWidth: 'w-full block',
+  fullWidth: 'w-full block text-center',
   noDecoration: 'hover:no-underline'
 }
 
