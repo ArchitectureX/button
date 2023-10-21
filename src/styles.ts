@@ -48,6 +48,7 @@ interface StylesMapping {
   disabled: string
   fullWidth: string
   noDecoration: string
+  margins: string
 }
 
 const stylesMapping: StylesMapping = {
@@ -66,7 +67,8 @@ const stylesMapping: StylesMapping = {
   },
   disabled: 'opacity-50 cursor-not-allowed',
   fullWidth: 'w-full block text-center',
-  noDecoration: 'hover:no-underline'
+  noDecoration: 'hover:no-underline',
+  margins: 'ml-0 ml-1 ml-2 ml-3 mr-0 mr-1 mr-2 mr-3'
 }
 
 export const getStyles = ({ color, variant, shape, size, disabled, fullWidth }: Props) => {

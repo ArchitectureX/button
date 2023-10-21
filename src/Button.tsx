@@ -16,6 +16,8 @@ interface Props extends ComponentPropsWithoutRef<'button'> {
   disabled?: boolean
   isLoading?: boolean
   loadingText?: string
+  leftSpaces?: 0 | 1 | 2 | 3
+  rightSpaces?: 0 | 1 | 2 | 3
 }
 
 const ButtonComponent: FC<Props> = ({
@@ -33,6 +35,8 @@ const ButtonComponent: FC<Props> = ({
   className = '',
   frontColor = '',
   hoverColor = '',
+  rightSpaces = 0,
+  leftSpaces = 0,
   ...btnProps
 }) => {
   const classNames = getStyles({
@@ -59,7 +63,7 @@ const ButtonComponent: FC<Props> = ({
     return (
       <span
         data-component="LinkButton"
-        className={cx.join(classNames, className, frontColor, hoverColor)}
+        className={cx.join(classNames, className, frontColor, hoverColor, `ml-${leftSpaces}`, `mr-${rightSpaces}`)}
         {...linkBtnProps}
         disabled={isLoading || disabled}
       >
