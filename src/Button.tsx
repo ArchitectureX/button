@@ -77,7 +77,7 @@ const ButtonComponent: FC<Props> = ({
   return (
     <button
       data-component="Button"
-      className={cx.join(classNames, className, frontColor, hoverColor)}
+      className={cx.join(classNames, className, frontColor, hoverColor, , `ml-${leftSpaces}`, `mr-${rightSpaces}`)}
       {...btnProps}
       disabled={isLoading || disabled}
     >
