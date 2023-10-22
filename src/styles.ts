@@ -51,6 +51,7 @@ interface StylesMapping {
   fullWidth: string
   noDecoration: string
   margins: string
+  cursor: string
 }
 
 const stylesMapping: StylesMapping = {
@@ -71,7 +72,8 @@ const stylesMapping: StylesMapping = {
   disabled: 'opacity-50 cursor-not-allowed',
   fullWidth: 'w-full block text-center',
   noDecoration: 'hover:no-underline',
-  margins: 'ml-0 ml-1 ml-2 ml-3 mr-0 mr-1 mr-2 mr-3'
+  margins: 'ml-0 ml-1 ml-2 ml-3 mr-0 mr-1 mr-2 mr-3',
+  cursor: 'cursor-pointer'
 }
 
 export const getStyles = ({ color, variant, shape, size, disabled, fullWidth, bold }: Props) => {
@@ -80,6 +82,7 @@ export const getStyles = ({ color, variant, shape, size, disabled, fullWidth, bo
   classes.push(stylesMapping.color[color][variant])
   classes.push(stylesMapping.shape[shape])
   classes.push(stylesMapping.size[size])
+  classes.push(stylesMapping.cursor)
 
   if (bold) {
     classes.push(stylesMapping.bold)

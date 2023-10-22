@@ -66,7 +66,7 @@ const ButtonComponent: FC<Props> = ({
     return (
       <span
         data-component="LinkButton"
-        className={cx.join(classNames, className, frontColor, hoverColor, `ml-${leftSpaces}`, `mr-${rightSpaces}`, 'cursor-pointer')}
+        className={cx.join(classNames, className, frontColor, hoverColor, `ml-${leftSpaces}`, `mr-${rightSpaces}`)}
         {...linkBtnProps}
         disabled={isLoading || disabled}
       >
@@ -80,7 +80,7 @@ const ButtonComponent: FC<Props> = ({
   return (
     <button
       data-component="Button"
-      className={cx.join(classNames, className, frontColor, hoverColor, `ml-${leftSpaces}`, `mr-${rightSpaces}`, 'cursor-pointer')}
+      className={cx.join(classNames, className, frontColor, hoverColor, `ml-${leftSpaces}`, `mr-${rightSpaces}`)}
       {...btnProps}
       disabled={isLoading || disabled}
     >
