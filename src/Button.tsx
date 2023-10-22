@@ -14,6 +14,7 @@ interface Props extends ComponentPropsWithoutRef<'button'> {
   target?: string
   fullWidth?: boolean
   disabled?: boolean
+  bold?: boolean
   isLoading?: boolean
   loadingText?: string
   leftSpaces?: 0 | 1 | 2 | 3
@@ -31,6 +32,7 @@ const ButtonComponent: FC<Props> = ({
   isLoading = false,
   loadingText = '',
   fullWidth = false,
+  bold = false,
   children,
   className = '',
   frontColor = '',
@@ -44,6 +46,7 @@ const ButtonComponent: FC<Props> = ({
     variant,
     shape,
     size,
+    bold,
     disabled: isLoading || disabled,
     fullWidth
   })

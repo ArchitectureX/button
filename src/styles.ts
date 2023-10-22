@@ -8,6 +8,7 @@ type Props = {
   size: 'small' | 'medium' | 'large' | 'xlarge'
   disabled: boolean
   fullWidth: boolean
+  bold: boolean
 }
 
 type ButtonVariant = 'contained' | 'outlined' | 'text'
@@ -45,6 +46,7 @@ interface StylesMapping {
   color: Colors
   shape: ShapeStyles
   size: SizeStyles
+  bold: string
   disabled: string
   fullWidth: string
   noDecoration: string
@@ -61,22 +63,27 @@ const stylesMapping: StylesMapping = {
   },
   size: {
     small: 'px-2 py-1 text-xs',
-    medium: 'px-4 py-2 text-sm',
+    medium: 'px-6 py-2 text-sm',
     large: 'px-6 py-3 text-base',
     xlarge: 'px-8 py-4 text-lg'
   },
+  bold: 'font-bold',
   disabled: 'opacity-50 cursor-not-allowed',
   fullWidth: 'w-full block text-center',
   noDecoration: 'hover:no-underline',
   margins: 'ml-0 ml-1 ml-2 ml-3 mr-0 mr-1 mr-2 mr-3'
 }
 
-export const getStyles = ({ color, variant, shape, size, disabled, fullWidth }: Props) => {
-  const classes: string[] = []
+export const getStyles = ({ color, variant, shape, size, disabled, fullWidth, bold }: Props) => {
+  const classes: string[] = ['transition duration-300']
 
   classes.push(stylesMapping.color[color][variant])
   classes.push(stylesMapping.shape[shape])
   classes.push(stylesMapping.size[size])
+
+  if (bold) {
+    classes.push(stylesMapping.bold)
+  }
 
   if (disabled) {
     classes.push(stylesMapping.disabled)

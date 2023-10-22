@@ -54,13 +54,13 @@ const config: Configuration = {
           text: 'bg-white hover:bg-elephant text-elephant'
         },
         secondary: {
-          contained: 'bg-emerald hover:bg-forest text-white',
+          contained: 'bg-green-600 hover:bg-green-700 text-white',
           outlined:
             'bg-white hover:bg-forest text-forest border border-forest hover:border-forest hover:text-white',
           text: 'bg-white hover:bg-forest text-forest'
         },
         success: {
-          contained: 'bg-pastel hover:bg-emerald text-white',
+          contained: 'bg-emerald hover:bg-forest text-white',
           outlined:
             'bg-white hover:bg-emerald text-emerald border border-emerald hover:border-emerald hover:text-white',
           text: 'bg-white hover:bg-emerald text-emerald'
