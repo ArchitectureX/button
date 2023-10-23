@@ -9,6 +9,7 @@ type Props = {
   disabled: boolean
   fullWidth: boolean
   bold: boolean
+  isLink: boolean
 }
 
 type ButtonVariant = 'contained' | 'outlined' | 'text'
