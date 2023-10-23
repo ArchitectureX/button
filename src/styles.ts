@@ -76,9 +76,9 @@ const stylesMapping: StylesMapping = {
       large: 'px-6 py-4 text-base',
       xlarge: 'px-8 py-5 text-lg'
     },
-    small: 'px-2 py-1 text-xs',
-    medium: 'px-6 py-2 text-sm',
-    large: 'px-6 py-3 text-base',
+    small: 'px-2 py-1.5 text-xs',
+    medium: 'px-6 py-2.5 text-sm',
+    large: 'px-6 py-3.5 text-base',
     xlarge: 'px-8 py-4 text-lg'
   },
   bold: 'font-bold',
