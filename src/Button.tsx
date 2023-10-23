@@ -42,6 +42,7 @@ const ButtonComponent: FC<Props> = ({
   ...btnProps
 }) => {
   const classNames = getStyles({
+    isLink: !!href,
     color,
     variant,
     shape,

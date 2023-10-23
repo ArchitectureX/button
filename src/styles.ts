@@ -40,6 +40,12 @@ type SizeStyles = {
   medium: string
   large: string
   xlarge: string
+  link: {
+    small: string
+    medium: string
+    large: string
+    xlarge: string
+  }
 }
 
 interface StylesMapping {
@@ -63,6 +69,12 @@ const stylesMapping: StylesMapping = {
     regular: 'rounded-lg'
   },
   size: {
+    link: {
+      small: 'px-2 py-2 text-xs',
+      medium: 'px-6 py-3 text-sm',
+      large: 'px-6 py-4 text-base',
+      xlarge: 'px-8 py-5 text-lg'
+    },
     small: 'px-2 py-1 text-xs',
     medium: 'px-6 py-2 text-sm',
     large: 'px-6 py-3 text-base',
@@ -76,12 +88,11 @@ const stylesMapping: StylesMapping = {
   cursor: 'cursor-pointer'
 }
 
-export const getStyles = ({ color, variant, shape, size, disabled, fullWidth, bold }: Props) => {
+export const getStyles = ({ color, variant, shape, size, disabled, fullWidth, bold, isLink }: Props) => {
   const classes: string[] = ['transition duration-300']
 
   classes.push(stylesMapping.color[color][variant])
   classes.push(stylesMapping.shape[shape])
-  classes.push(stylesMapping.size[size])
   classes.push(stylesMapping.cursor)
 
   if (bold) {
@@ -94,6 +105,12 @@ export const getStyles = ({ color, variant, shape, size, disabled, fullWidth, bo
 
   if (fullWidth) {
     classes.push(stylesMapping.fullWidth)
+  }
+
+  if (isLink) {
+    classes.push(stylesMapping.size.link[size])
+  } else {
+    classes.push(stylesMapping.size[size])
   }
 
   return [...new Set(classes.join(' ').split(' '))].join(' ')
