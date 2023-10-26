@@ -4,6 +4,7 @@ import config from './config'
 import { getStyles } from './styles'
 
 interface Props extends ComponentPropsWithoutRef<'button'> {
+  name?: string
   color?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info' | 'light' | 'dark'
   size?: 'small' | 'medium' | 'large' | 'xlarge'
   variant?: 'contained' | 'outlined' | 'text'
@@ -22,6 +23,7 @@ interface Props extends ComponentPropsWithoutRef<'button'> {
 }
 
 const ButtonComponent: FC<Props> = ({
+  name = '',
   color = config.components.button.defaultProps.color,
   shape = config.components.button.defaultProps.shape,
   size = config.components.button.defaultProps.size,
@@ -70,6 +72,8 @@ const ButtonComponent: FC<Props> = ({
         className={cx.join(classNames, className, frontColor, hoverColor, `ml-${leftSpaces}`, `mr-${rightSpaces}`)}
         {...linkBtnProps}
         disabled={isLoading || disabled}
+        role="button"
+        aria-label={name || buttonText?.toString()}
       >
         <a {...linkBtnProps} className="hover:no-underline">
           {buttonText}
@@ -84,6 +88,8 @@ const ButtonComponent: FC<Props> = ({
       className={cx.join(classNames, className, frontColor, hoverColor, `ml-${leftSpaces}`, `mr-${rightSpaces}`)}
       {...btnProps}
       disabled={isLoading || disabled}
+      role="button"
+      aria-label={name || buttonText?.toString()}
     >
       {buttonText}
     </button>
