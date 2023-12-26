@@ -3,7 +3,7 @@ import config from './config'
 
 type Props = {
   color: 'primary' | 'secondary' | 'success' | 'danger' | 'info' | 'warning' | 'light' | 'dark'
-  variant: 'contained' | 'outlined' | 'text'
+  variant: 'contained' | 'outlined' | 'transparent'
   shape: 'regular' | 'rounded' | 'circle' | 'square'
   size: 'small' | 'medium' | 'large' | 'xlarge'
   disabled: boolean
@@ -12,7 +12,7 @@ type Props = {
   isLink: boolean
 }
 
-type ButtonVariant = 'contained' | 'outlined' | 'text'
+type ButtonVariant = 'contained' | 'outlined' | 'transparent'
 
 type ColorStyles = {
   [variant in ButtonVariant]: string

@@ -7,7 +7,7 @@ interface Props extends ComponentPropsWithoutRef<'button'> {
   name?: string
   color?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info' | 'light' | 'dark'
   size?: 'small' | 'medium' | 'large' | 'xlarge'
-  variant?: 'contained' | 'outlined' | 'text'
+  variant?: 'contained' | 'outlined' | 'transparent'
   shape?: 'regular' | 'rounded' | 'circle' | 'square'
   frontColor?: string
   hoverColor?: string
