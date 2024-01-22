@@ -1,5 +1,4 @@
-export default () => `
-import React, { FC, ComponentPropsWithoutRef } from 'react'
+export default () => `import React, { FC, ComponentPropsWithoutRef } from 'react'
 import cx from '@architecturex/utils.cx'
 
 interface Props extends ComponentPropsWithoutRef<'button'> {
