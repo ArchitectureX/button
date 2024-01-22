@@ -31,7 +31,8 @@ const Button: FC<Props> = ({
   bold = false,
   isLoading = false,
   loadingText = 'Loading...',
-  children
+  children,
+  onClick = () => {}
 }) => {
   const baseClasses = 'p-2 text-center transition duration-300'
   const sizeClasses = {
@@ -127,6 +128,7 @@ const Button: FC<Props> = ({
       className={buttonClasses}
       style={{ color: frontColor, backgroundColor: hoverColor }}
       disabled={disabled}
+      onClick={onClick || undefined}
     >
       {content}
     </button>
